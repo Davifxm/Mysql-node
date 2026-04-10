@@ -1,0 +1,26 @@
+<div class="container">
+    <h2>Editar Usuário: {{registro.nome}}</h2>
+    <hr>
+    
+    <form action="/teste/update" method="POST">
+        <input type="hidden" name="id" value="{{registro.id}}">
+
+        <div class="mb-3">
+            <label class="form-label">Nome Completo</label>
+            <input type="text" name="nome" value="{{registro.nome}}" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">E-mail</label>
+            <input type="email" name="email" value="{{registro.email}}" class="form-control" required>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Senha</label>
+            <input type="text" name="senha" value="{{registro.senha}}" class="form-control" required>
+        </div>
+
+        <button type="submit" class="btn btn-success">Confirmar Alterações</button>
+        <a href="/teste" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>
